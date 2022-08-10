@@ -1,0 +1,656 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: FirstFont;
+    src: url(/assets/Fonts/louis_george_caf/Louis\ George\ Cafe.ttf);
+}
+@font-face {
+    font-family: FirstFontItalic;
+    src: url(/assets/Fonts/louis_george_caf/Louis\ George\ Cafe\ Light\ Italic.ttf);
+}
+
+@font-face{
+    font-family: SecondFont;
+    src: url(/assets/Fonts/technovier/Techovier\ Bold.ttf);
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    letter-spacing: 1px;
+}
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+.navbar{
+    display: none;
+}
+ul{
+    font-family: 'Work Sans', sans-serif;
+    width: 40%;
+    height: 5%;
+    display: flex;
+    position: absolute;
+    margin-top: 3%;
+}
+.Separator{
+    width: 2%;
+    height: 70%;
+    margin-right: 10%;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+}
+ul > a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 100;
+    margin-left: -10%;
+}
+.dropdown{
+    display: none;
+}
+.FirstSection{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.BackgroundPhoto{
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/images/MainPhoto.png);
+    background-size: cover;
+
+}
+.TextBox{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-family: FirstFont;
+}
+.TextBox > h1{
+    font-size: 5rem; 
+    font-family: SecondFont;
+}
+#Saudacao, #Nome{
+    animation: FadingName 3s ease-in-out;
+}
+#Profissao{
+    font-family: FirstFontItalic; 
+    white-space: nowrap;
+    overflow: hidden;
+    animation: Typing 1.5s steps(20), 
+    blink .85s infinite;
+}
+.Chevron{
+    width: 10%;
+    height: 10%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    animation: Jumping 4s ease-in-out infinite ;
+}
+.ContactContainer{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-left: 5%;
+}
+.ContatoBox{
+    width: 5%;
+    height: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 2px solid white;
+    border-radius: 5px 5px 5px 5px;
+}
+.ContatoBox > img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+    height: 10%;
+    width: 60%;
+}
+.ContatoBox > h1{
+    transform: rotateZ(-90deg);
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+
+
+/* ANIMACOES */
+@keyframes FadingName{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes FadingDown{
+    from{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes Typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 18%;
+    }
+}
+@keyframes blink {
+    from { border-color: transparent }
+    to { border-right: white; border-right: 2px solid; }
+  }
+
+  @keyframes Jumping{
+      0%{
+          transform: translateY(0);
+      }
+      50%{
+        transform: translateY(-30px);
+      }
+      100%{
+        transform: translateY(0);
+      }
+  }
+
+.reveal{
+    position: relative;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 4s all ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reveal2{
+    position: relative;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 4s all ease;
+}
+.reveal2.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+.SecondSection{
+    background-color: rgb(103, 103, 103);
+    width: 100vw;
+    height: 100%;
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+.MainTitle{
+    width: 100%;
+    height: 100%;
+}
+.SeparatorBox{
+    position: absolute;
+    background-color: black;
+    height: 2%;
+    width: 7%;
+    margin-top: .5%;
+}
+.AboutMeBox{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+.PhotoBox{
+    width: 98%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.ProfilePhoto{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 25px 25px 25px 25px;
+}
+.ThirdSection{
+    width: 100vw;
+    height: 100%;
+    padding-top: 3%;
+    display: block;
+    padding-left: 10%;
+    color: black;
+    font-family: 'Work Sans', sans-serif;
+}
+.SeparatorHabilidades{
+    background-color: gray; 
+    width: 30%; 
+    height: 2%; 
+    position: absolute;
+    border-radius: 5px 5px 5px 5px;
+}
+.ContentContainer{
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    margin-bottom: 7%;
+}
+.Habilidade{
+    width: 100%;
+    height: 100%;
+    margin-top: 1%;
+    display: block;
+    margin-bottom: 2%;
+}
+.Projects{
+    background-color: rgb(103, 103, 103);
+    width: 100vw;
+    height: 100%;
+    padding-top: 3%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+}
+.CardContainer{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    overflow-x: scroll;
+    padding-right: 10%;
+    margin-bottom: 10%;
+}
+.Card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 10%;
+    color: black;
+}
+.Card > img {
+    width: 100%;
+}
+.Card > h1{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.Card > p{
+    width: 90%;
+}
+.Card > a {
+    margin-top: 2%;
+    width: 50%;
+    margin-bottom: 5%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 5px 5px 5px 5px;
+    background-color: black;
+    cursor: pointer;
+}
+.FourthSection{
+    width: 100vw;
+    height: 100%;
+    padding-left: 10%;
+    padding-top: 3%;
+    font-family: 'Work Sans', sans-serif;   
+}
+.TrabalhoOferecidos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.Trabalho{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Trabalho > h1{
+    margin-top: -10%;
+    font-size: 2rem;
+}
+.Trabalho > h4{
+    width: 65%;
+    margin-top: 2%;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: center;
+}
+footer{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    background-color: rgb(103, 103, 103);
+    color: white;
+    font-family: 'Work Sans', sans-serif;   
+    letter-spacing: 2px;
+}
+footer > h1{
+    font-size: 1.2rem;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+footer > h4{
+    margin-bottom: 2%;
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+    ul{
+        display: none;
+        width: 95vw;
+        margin-top: 5%;
+    }
+    ul >a{
+        font-size: 1rem;
+    }
+    .TextBox{
+        font-size: 1rem;
+    }
+    .TextBox > h1{
+        font-size: 2rem;
+    }
+    .ContactContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .navbar {
+        display: block;
+        width: 100%;
+        box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+        position: absolute;
+      }
+      
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 62px;
+      }
+      
+      .navbar .menu-items {
+        display: flex;
+      }
+      
+      .navbar .nav-container li {
+        list-style: none;
+      }
+      
+      .navbar .nav-container a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding: 0.7rem;
+        font-family: FirstFont;
+      }
+      
+      .navbar .nav-container a:hover{
+          font-weight: bolder;
+      }
+      
+      .nav-container {
+        display: block;
+        position: relative;
+        height: 60px;
+      }
+      
+      .nav-container .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+      }
+      
+      .nav-container .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      
+      .nav-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #eee;
+      }
+      
+      .nav-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .nav-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      .nav-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .navbar .menu-items {
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0);
+        height: 40vh;
+        width: 100%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+      }
+      
+      .navbar .menu-items li {
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 5%;
+      }      
+      
+      .nav-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+      }
+      
+      .nav-container input[type="checkbox"]:checked ~ .logo{
+        display: none;
+      }    
+
+
+
+    .ContatoBox{
+        height: 45%;
+        width: 15%;
+        transform: rotateZ(90deg);
+    }
+    .ContatoBox > h1{
+        font-size: .7rem;
+    }
+    .ContatoBox > img{
+        transform: rotateZ(270deg);
+    }
+    .Chevron{
+        width: 20%;
+    }
+    .SeparatorBox{
+        width: 20%;
+    }
+    .AboutMeBox{
+        width: 90vw;
+        margin-top: 10%;
+        font-size: 1rem;
+    }
+    .AboutMeBox > p {
+        font-weight: 100;
+    }
+    .SecondSection{
+        height: 100%;
+        width: 100vw;
+    }
+    .PhotoBox{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: -10%;
+        margin-top: 50%;
+    }
+    .ProfilePhoto{
+        width: 70%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ThirdSection{
+        margin-top: 60%;
+        margin-bottom: 15%;
+    }
+    .SeparatorHabilidades{
+        width: 50vw;
+    }
+    .Habilidade{
+        margin-top: 15%;
+        margin-bottom: 10%;
+        font-size: .6rem;
+    }
+    .CardContainer{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        margin-bottom: 20%;
+    }
+    .Card{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: .9rem;
+    }
+    .Card > h1{
+        font-size: 1.5rem;
+    }
+    .TrabalhoOferecidos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -5%;
+    }
+    footer > h1{
+        font-size: 1rem;
+    }
+    footer > h4{
+        margin-bottom: 5%;
+    }
+}

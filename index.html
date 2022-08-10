@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Gabriel Ribeiro Desenvolvedor</title>
+</head>
+<script>
+    function sendEmail(){
+      window.location.assign("mailto:gabriel.gomesss@hotmail.com")
+  }
+
+  function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible =190;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
+
+  function reveal2() {
+  var reveals = document.querySelectorAll(".reveal2");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible =190;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal2);
+
+</script>
+<body>
+    <header>
+        <ul>
+            <a href="">Início</a>
+            <span class="Separator"></span>
+            <a href="#AboutMe">Sobre Mim</a>
+            <span class="Separator"></span>
+            <a href="#Projetos">Projetos</a>
+            <span class="Separator"></span>
+            <a style="padding-left: 4%;"href="#Trabalhos">Trabalhos Oferecidos</a>
+        </ul>
+
+            <div class="navbar">
+              <div class="container nav-container">
+                  <input class="checkbox" type="checkbox" name="" id="" />
+                  <div class="hamburger-lines">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                  </div>  
+                <div class="menu-items">
+                  <li><a href="#SecondSection">Sobre Mim</a></li>
+                  <li><a href="#Habilidades">Habilidades</a></li>
+                  <li><a href="#Projetos">Projetos</a></li>
+                  <li><a href="#Trabalhos">Trabalhos Oferecidos</a></li>
+                </div>
+              </div>
+            </div>
+
+      </section>
+    </header>
+    <div class="FirstSection">
+        <div class="TextBox">
+            <h3 id="Saudacao" style=" font-family: FirstFontItalic; font-weight: 100;">Bem-vindos ao meu site!</h3>
+            <h1 id="Nome">Gabriel Ribeiro</h1>
+            <h3 id="Profissao">Desenvolvedor</h3>
+        </div>
+        <div class="BackgroundPhoto"></div>
+        <img class="Chevron" src="./assets/images/upchevron.png" alt="" />
+        <div class="ContactContainer">
+            <div class="ContatoBox">
+                <img onclick="window.open('https://instagram.com/gabrielribeirodev?igshid=YmMyMTA2M2Y=')" id="instagram" src="./assets/images/instagram.png" alt="">
+                <img onclick="sendEmail()" src="./assets/images/outline_email_black_24dp.png" alt="">
+                <img onclick="window.open('https://wa.me/5511968387267?text=Olá%20gostaria%20de%20uma%20informação.')" src="./assets/images/outline_whatsapp_black_24dp.png" alt="">      
+                <h1>Meus contatos:</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="SecondSection">
+        <div class="MainTitle">
+            <h1 id="AboutMe">Sobre Mim</h1>
+            <div class="SeparatorBox"></div>
+        </div>
+            <div class="AboutMeBox reveal">
+                <h4>Olá, meu nome é Gabriel Ribeiro.</h4>
+                Sou formado em análise e desenvolvimento de sistemas.</br>
+                Apaixonado por tecnologia, entrega de resultado, inovação e sou um eterno aprendiz. Possuo experiência
+                com projetos pessoais, desenvolvi o aplicativo Anatomy Gym com linguagem de programação híbrida e sites em ReactJs e HTML para parceiros.
+                Sou uma pessoa extrovertida, dedicada e que ama resultados sólidos.</br></br>
+                Meu lema é: Missão dada é missão cumprida!
+            </p></br></br>
+            <h3>Quer me conhecer mais?</br></br>
+                Me chame para um café!</h3></br></br></br>      
+        </div>
+        <div class="PhotoBox">
+            <img class="ProfilePhoto reveal2" src="./assets/images/ProfileFoto.JPG" alt="">
+        </div>
+    </div>
+    <div class="ThirdSection">
+        <div class="MainTitle">
+            <h1 id="Habilidades" class="reveal">Habilidades</h1>
+            <div style="background-color: rgb(103, 103, 103);" class=" reveal SeparatorBox"></div>
+        </div>
+        <div class="ContentContainer">
+            <div class="Habilidade">
+                <h1 class="reveal2">HTML</h1>
+                <div class=" reveal2 SeparatorHabilidades"></div>
+            </div>
+            <div class="Habilidade">
+                <h1 class="reveal2">ReactJs</h1>
+                <div class=" reveal2 SeparatorHabilidades"></div>
+            </div>
+            <div class="Habilidade">
+                <h1 class="reveal2">React Native</h1>
+                <div class=" reveal2 SeparatorHabilidades"></div>
+            </div>
+        </div>
+    </div>
+    <div class="Projects">
+        <div class="MainTitle">
+            <h1 id="Habilidades" class="reveal">Projetos</h1>
+            <div class=" reveal SeparatorBox"></div>
+        </div>
+        <div class="CardContainer">
+            <div class="Card reveal2">
+                <img src="./assets/images/logo8.png" alt="">
+                <h1>Automobile Passione</h1>
+                <p>Projeto web desenvolvido para uma loja de veículos premium, com serviços de assessoria automotiva como por exemplo avaliação, pré-compra e vendas.<br/><br/>
+                    Projeto desenvolvido em HTML e CSS</p>
+                <a onclick="window.open('https://automobilepassione.netlify.app')"  href="">Visitar Site</a>
+            </div>
+            <div class="Card reveal2">
+                <img src="./assets/images/icon2.png" alt="">
+                <h1>Anatomy Gym</h1>
+                <p>Neste projeto a ideia central é demonstrar aos praticantes de musculação quais são os músculos envolvidos em determinado exercício e quais são as principais funções do músculo no corpo humano, auxiliando assim a compreensão do exercício.<br/><br/>
+                    Projeto desenvolvido em linguagem híbrida - React Native (iOS e Android)
+                </p>
+                <a onclick="window.open('https://anatomygym.netlify.app')"  href="">Visitar Site</a>
+            </div>
+        </div>
+    </div>
+    <div class="FourthSection">
+        <div class="MainTitle">
+            <h1 id="Trabalhos">Trabalhos Oferecidos</h1>
+            <div class="SeparatorBox"></div>
+        </div>
+        <div class="TrabalhoOferecidos">
+            <div class="Trabalho reveal2">
+                <img src="./assets/images/landingPage.png" alt="">
+                <h1>Landing Pages</h1>
+                <h4>Criação de landing pages para negocios locais ou e-commerces.</h4>
+            </div>
+            <div class="Trabalho reveal2">
+                <img src="./assets/images/trafego.png" alt="">
+                <h1>Tráfego Pago</h1>
+                <h4>Método eficaz para aumentar suas vendas, aumentar carteira de clientes e fazer o seu negócio decolar de vez!</h4>
+            </div>
+            <div class="Trabalho reveal2">
+                <img src="./assets/images/site.png" alt="">
+                <h1>Criação de sites</h1>
+                <h4>Criação de sites completos, com requisições, formas de pagamento, banco de dados e muito mais!</h4>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h1>Desenvolvido por Gabriel Ribeiro</h1>
+        <h4>(11) 968387267</h4>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    flex: 1;
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-top: 5%;
+    color: white;
+}
+ul{
+    width: 100%;
+    margin-left: 40%;
+    scroll-behavior: smooth;
+}
+ul > a {
+    text-decoration: none;
+    color: white;
+    margin-left: 3%;
+    margin-right: 3%;
+    cursor: pointer;
+}
+.Separator{
+    width: 3px;
+    height: 25px;
+    background-color: white;
+    position: absolute;
+}
+.MainContent{
+    /* width: 100vw;
+    height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-self: center;
+}
+.MainPhoto{
+    width: 100vw;
+    height: 100%;
+    background-size: contain;
+}
+.TextBox{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70%;
+    margin-bottom: 9%;
+}
+.Welcome > h3{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: white;
+    animation: FadingDown 4s ease-in-out;
+}
+.Name > h1{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 6rem;
+    color: white;
+    animation: FadingDown 4s ease-in-out;
+}
+.Profissao > h3{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    letter-spacing: 5px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: Typing 2.5s steps(60), 
+    blink .75s infinite;
+}
+.Mouse{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    margin-left: 40%;
+    margin-top: 20%;
+    animation: Jumping 4s ease-in-out infinite ;
+}
+.ContactBox{
+    width: 6vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px white solid;
+    border-radius: 25px 25px 10px 10px ;
+    /* margin-top: -105%; */
+    margin-left: 5%;
+}
+.ContactBox > img {
+    display: flex;
+    flex-direction: column;
+    margin-top: -80%;
+    margin-bottom: -150%;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+#instagram{
+    width: 35px;
+}
+.ContactBox > p{
+    font-family: 'Work Sans', sans-serif;
+    display: inline;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: -50%;
+    margin-bottom: -10%;
+    margin-top: 10%;
+    color: white;
+    transform: rotateZ(-90deg);
+}
+
+/* ANIMACOES */
+@keyframes FadingName{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes FadingDown{
+    from{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes Typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink {
+    from { border-color: transparent }
+    to { border-right: white; border-right: 2px solid; }
+  }
+
+  @keyframes Jumping{
+      0%{
+          transform: translateY(0);
+      }
+      50%{
+        transform: translateY(-30px);
+      }
+      100%{
+        transform: translateY(0);
+      }
+  }
+
+.reveal{
+    position: relative;
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: 4s all ease;
+}
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reveal2{
+    position: relative;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: 4s all ease;
+}
+.reveal2.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+
+  /* SOBRE MIM  */
+
+.AboutMeBox{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(136, 136, 136);
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.AboutMeBox > h1{
+    font-size: 2.5rem;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.AboutMeBox > h3{
+    font-size: 1.5rem;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+.AboutMeBox > p{
+    width: 50%;
+    font-size: 1.5rem;
+    margin-top: 2%;
+    margin-left: 10%;
+    font-weight: 100;
+}
+.Habilidades{
+    background-color: white;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.FotoPerfil{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 350px;
+    height: 450px;
+    margin-left: 55%;
+    transform: translateY(-45%);
+    border-radius: 25px;
+    zoom: 1.5;
+}
+.HabilidadesBox{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: -15%;
+    margin-left: 10%;
+    font-family: 'Work Sans', sans-serif;
+}
+.HabilidadesBox > h1{
+    font-size: 2.5rem;
+    margin-left: 10%;
+}
+.HabilidadesBox > p {
+    margin-top: 5%;
+    font-size: 1.5rem;
+}
+.Projetos{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color: rgb(136, 136, 136);
+    font-family: 'Work Sans', sans-serif;
+    margin-top: -13%;
+}
+.Projetos > h1{
+    font-size: 2.5rem;
+    margin-top: 5%;
+    margin-left: 10%;
+    color: white;
+}
+.CardBox{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+}
+.Card{
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    margin-left: 20%;
+    margin-bottom: 10%;
+}
+.CardImage{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+.Card > p{
+    background-color: white;
+    color: black;
+    margin-top: -5%;
+    padding: 5%;
+    font-weight: 200;
+}
+.Trabalhos{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Work Sans', sans-serif;
+}
+.Trabalhos > h1{
+    font-size: 2.5rem;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.TrabalhoBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: rgb(136, 136, 136);
+    margin-bottom: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.TrabalhoIndividual{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+.TrabalhoIndividual > img {
+    width: 50%;
+    height: 50%;
+}
+#LandingPage{
+    width: 200px;
+}
+
+.TrabalhoIndividual > h2{
+    width: 50%;
+    color: rgb(136, 136, 136);
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: -5%;
+}
+.TrabalhoIndividual > p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: left;
+    width: 50%;
+    margin-top: 5%;
+    color: black;
+    margin-left: 10%;
+}
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    background-color: rgb(45, 45, 45);
+    margin-bottom: 5%;
+}
+footer > h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 2%;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+footer > span{
+    width: 30%;
+    height: 50px;
+    background-color: rgb(136, 136, 136);
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border-radius: 25px 25px 25px 25px;
+    transform: translateY(45%);
+}
+.tel > h1{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+                /* MOBILE */
+@media(max-width:768px){
+    body{
+        flex: 1;
+    }
+    header{
+        font-size: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-self: center;
+    }
+    ul{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        margin-left: -35%;
+        margin-top: 5%;
+    }
+    .MainPhoto{
+        width: 100vw;
+        height: 100vh;
+    }
+    .TextBox{
+        margin-top: -185%;
+    }
+    .TextBox > span>h1{
+        font-size: 2.6rem;
+    }
+    .TextBox > span>h3{
+        font-size: 1.3rem;
+    }
+    .Mouse{
+        width: 70%;
+        height: 50%;
+        margin-top: 100%;
+        margin-left: 15%;
+        padding-top: 15%;
+    }
+    .ContactBox{
+        width: 70vw;
+        height: 10%;
+        display: flex;
+        flex-direction: row;
+        margin-top: 50%;
+        margin-left: 18%;
+        border: 2px white solid;
+        border-radius: 10px 25px 25px 10px ;
+        /* padding-right: 10%; */
+    }
+    .ContactBox > img{
+        display: flex;
+        flex-direction: row;
+        margin-top: -150%;
+    }
+    .ContactBox > p{
+        display: none;
+    }
+    .AboutMeBox > h1{
+        font-size: 1.8rem;
+    }
+    .AboutMeBox > h3{
+        font-size: 1.2rem;
+        margin-bottom: 30%;
+    }
+    .AboutMeBox > p{
+        width: 80%;
+        font-size: 1rem;
+        font-weight: 300;
+        /* margin-top: 2%; */
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-top: -25%;
+    }
+    .FotoPerfil{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 60%;
+        height: 10%;
+        margin-bottom: 10%;
+        margin-left: 5%;
+        transform: translateY(-85%);
+        border-radius: 25px;
+    }
+    .Habilidades{
+        margin-top: 30%;
+        margin-bottom: 50%;
+    }
+    .HabilidadesBox{
+        font-size: .5rem;
+        margin-top: 100%;
+    }
+    .HabilidadesBox > h1{
+        font-size: 2rem;
+        margin-top: -80%;
+    }
+    .Projetos > h1 {
+        font-size: 1.8rem;
+    }
+    .CardBox{
+        display: flex;
+        flex-direction: column;
+    }
+    .Card{
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 10%;
+        overflow: scroll;
+    }
+    .TrabalhoBox{
+        display: flex;
+        flex-direction: column;
+    }
+    #LandingPage{
+        width: 60%;
+    }
+    .Trabalhos > h1{
+        font-size: 1.8rem;
+    }
+    .TrabalhoIndividual > h2{
+        font-size: 1.5rem;
+    }
+    .TrabalhoIndividual > p {
+        width: 100%;
+    }
+    footer > h1{
+        font-size: 1.2rem;
+    }
+    footer > span{
+        width: 80%;
+        color: white;
+        font-size: 0.7rem;
+    }
+}

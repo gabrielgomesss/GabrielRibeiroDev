@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Gabriel Ribeiro - Início</title>
+  <script>
+    function sendEmail(){
+      window.location.assign("mailto:gabriel.gomesss@hotmail.com")
+  }
+
+  function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible =190;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal);
+
+  function reveal2() {
+  var reveals = document.querySelectorAll(".reveal2");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible =190;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll", reveal2);
+
+</script>
+</head>
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1132298507549370');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1132298507549370&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+
+<body>
+  <header>
+    <ul class="MainMenu">
+      <a href="#MainContent" style="font-weight: 900;">INÍCIO</a><span class="Separator"></span>
+      <a href="#AboutMeBox">SOBRE MIM</a><span class="Separator"></span>
+      <a href="#Projetos"> PROJETOS</a><span class="Separator"></span>
+      <a href="#Trabalhos">TRABALHOS OFERECIDOS</a>
+    </ul>
+  </header>
+  <div class="MainContent" id='MainContent'>
+    <img src="./assets/images/MainPhoto.png" alt="" class="MainPhoto">
+    <span class="TextBox">
+      <span class="Welcome"><h3>Bem-vindos ao meu site!</h3></span>
+      <span class="Name">
+        <h1>Gabriel Ribeiro</h1>
+      </span>
+      <span class="Profissao">
+        <h3>Desenvolvedor</h3>
+      </span>
+    </span>
+    <img src="./assets/images/mouse.png" alt="" class="Mouse">
+    <span class="ContactBox">
+      <img onclick="window.open('https://instagram.com/gabrielribeirodev?igshid=YmMyMTA2M2Y=')" id="instagram" src="./assets/images/instagram.png" alt="">
+      <img onclick="sendEmail()" src="./assets/images/outline_email_black_24dp.png" alt="">
+      <img onclick="window.open('https://wa.me/5511968387267?text=Olá%20gostaria%20de%20uma%20informação.')" src="./assets/images/outline_whatsapp_black_24dp.png" alt="">
+      <p>Meus Contatos:</p>
+    </span>
+  </div>
+    <div class="AboutMeBox" id="AboutMeBox">
+      <h1>SOBRE MIM</h1>
+      <span style="background-color: black; height: 10px; width: 75px; margin-left: 10%; margin-top: 0.5%;"></span>
+      <h3 class="reveal">Olá, meu nome é Gabriel Ribeiro.</h3>
+      <p class="reveal">Sou formado em análise e desenvolvimento de sistemas.</br>
+        Apaixonado por tecnologia, entrega de resultado, inovação e sou um eterno aprendiz. Possuo experiência
+        com projetos pessoais, desenvolvi o aplicativo Anatomy Gym com linguagem de programação híbrida e sites em ReactJs e HTML para parceiros.
+        Sou uma pessoa extrovertida, dedicada e que ama resultados sólidos.</br></br>
+        Meu lema é: Missão dada é missão cumprida!
+      </p>
+      <h3>Quer me conhecer mais?</br>Me chame para um café!</h3></br></br></br>
+    </div>
+      <div class="Habilidades">
+        <img src="./assets/images/ProfileFoto.JPG" alt="" class="FotoPerfil"/>
+        <span class="HabilidadesBox" id="HabilidadesBox">
+          <h1>HABILIDADES</h1>
+          <span style="background-color:rgb(136, 136, 136); height: 10px; width: 75px; margin-left: 10%; margin-top: 0.5%;"></span>
+          <p class="reveal2" style="margin-top: 20%;">HTML</p>
+          <span class="reveal2" style="background-color:rgb(136, 136, 136); height: 10px; width: 305px; margin-left: 0%;"></span>
+          <p class="reveal2">ReactJS</p>
+          <span class="reveal2" style="background-color:rgb(136, 136, 136); height: 10px; width: 305px; margin-left: 0%;"></span>
+          <p class="reveal2">React Native</p>
+          <span class="reveal2" style="background-color:rgb(136, 136, 136); height: 10px; width: 305px; margin-left: 0%;"></span>
+        </span>
+      </div>
+      <div class="Projetos" id="Projetos">
+        <h1>Projetos</h1>
+        <span style="background-color:black; height: 10px; width: 75px; margin-left: 10%; margin-top: 0.5%;"></span>
+        <span class="CardBox">
+        <span  class="Card reveal2">
+          <img src="./assets/images/icon2.png" alt="" class="CardImage">
+          <p>Neste projeto a ideia central é demonstrar aos praticantes de musculação quais são os músculos envolvidos em determinado exercício e quais são as principais funções do músculo no corpo humano, auxiliando assim a compreensão do exercício.
+            Projeto desenvolvido em linguagem híbrida - React Native (iOS e Android)</p>
+        </span>
+        <span class="Card reveal2">
+          <img src="./assets/images/TheGarageConsulting.jpg" alt="" class="CardImage">
+          <p>Projeto web desenvolvido para uma loja de veículos premium, com serviços de assessoria automotiva como por exemplo avaliação, pré-compra e vendas.
+            Projeto desenvolvido em HTML e CSS</p>
+        </span>
+        </span>
+      </div>
+      <div class="Trabalhos" id="Trabalhos">
+        <h1>TRABALHOS OFERECIDOS</h1>
+        <span style="background-color:rgb(136, 136, 136); height: 10px; width: 75px; margin-left: 10%; margin-top: 0.5%;"></span>
+        <span class="TrabalhoBox">
+          <span class="TrabalhoIndividual reveal">
+            <img id="LandingPage" style="margin-bottom: -5%;" src="./assets/images/landingPage.png" alt=""/>
+            <h2>LANDING PAGES</h2>
+            <p>Criação de landing pages para negocios locais ou e-commerces.</p>
+          </span>
+          <span class="TrabalhoIndividual reveal">
+            <img style="margin-bottom: -5%;"src="./assets/images/site.png" alt=""/>
+            <h2>CRIAÇÃO DE SITES</h2>
+            <p>Criação de sites completos, com requisições, formas de pagamento, banco de dados e muito mais!</p>
+          </span>
+          <span class="TrabalhoIndividual reveal">
+            <img src="./assets/images/trafego.png" alt=""/>
+            <h2>TRÁFEGO PAGO</h2>
+            <p>Método eficaz para aumentar suas vendas, aumentar carteira de clientes e fazer o seu negócio decolar de vez!</p>
+          </span>
+        </span>
+      </div>
+      <footer>
+        <h1>Entre em contato:</h1>
+        <span class="tel">
+          <h1>(11) 96838-7267</h1>
+        </span>
+      </footer>
+</body>
+</html>
